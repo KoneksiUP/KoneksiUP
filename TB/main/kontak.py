@@ -12,8 +12,9 @@ def hapus_kontak(kontak, nama):
 
 def tampilkan_kontak(kontak):
     if kontak:
-        print("Daftar Kontak:")
+        print("\nDaftar Kontak:")
         for nama, nomor in kontak:
+            print("-----------------------")
             print("Nama:", nama)
             print("Nomor:", nomor)
             print("-----------------------")
@@ -41,7 +42,7 @@ def main():
     kontak = []
 
     while True:
-        print("===== KoneksiUP =====")
+        print("\n===== KoneksiUP =====")
         print("1. Tambah Kontak")
         print("2. Hapus Kontak")
         print("3. Tampilkan Kontak")
