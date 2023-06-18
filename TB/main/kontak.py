@@ -41,7 +41,7 @@ def main():
     kontak = []
 
     while True:
-        print("===== Contact Manager =====")
+        print("===== KoneksiUP =====")
         print("1. Tambah Kontak")
         print("2. Hapus Kontak")
         print("3. Tampilkan Kontak")
@@ -66,7 +66,7 @@ def main():
             insertion_sort(kontak)
             print("Kontak berhasil disortir secara otomatis!")
         elif pilihan == "6":
-            print("Terima kasih telah menggunakan Contact Manager.")
+            print("Terima kasih telah menggunakan KoneksiUP.")
             break
         else:
             print("Pilihan tidak valid. Silakan pilih menu (1-6) yang tersedia.")
