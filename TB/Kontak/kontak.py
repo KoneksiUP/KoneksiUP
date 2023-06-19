@@ -1,4 +1,6 @@
-
+def tambah_kontak(kontak, nama, nomor):
+    kontak.append((nama, nomor))
+    print("Kontak berhasil ditambahkan!")
 
 def hapus_kontak(kontak, nama):
     for i, (kontak_nama, _) in enumerate(kontak):
