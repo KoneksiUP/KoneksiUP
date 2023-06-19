@@ -21,6 +21,7 @@ def tampilkan_kontak(kontak):
         if data['status'] != False:
             nama = data['nama']
             nomor = data['nomor']
+            print("=======================")
             print(f"Nama: {nama}")
             print(f"Nomor: {nomor}")
             print("=======================")
@@ -31,6 +32,7 @@ def cari_kontak(kontak, nama):
         if data['nama'] == nama:
             nama = data['nama']
             nomor = data['nomor']
+            print("=======================")
             print(f"Nama: {nama}")
             print(f"Nomor: {nomor}")
             print("=======================")
