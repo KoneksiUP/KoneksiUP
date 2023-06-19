@@ -58,3 +58,60 @@ def blokir_kontak(kontak, daftar_blokir, nama):
             else:
                 print("Nama tidak ditemukan!")
     return None
+
+def unblokir_kontak(kontak, daftar_blokir, nama):
+    for i in range(len(daftar_blokir)):
+        if daftar_blokir[i]['nama'] == nama:
+            print("Kontak berhasil diunblokir!")
+            daftar_blokir.pop(i)
+            for i in range(len(kontak)):
+                if kontak[i]['nama'] == nama:
+                    kontak[i]['status'] = True
+                    return None
+        else:
+            print("Nama tidak ditemukan!")
+    return None
+
+def main():
+    kontak = []
+    daftar_blokir = []
+
+    while True:
+        print("\n===== KoneksiUP =====")
+        print("1. Tambah Kontak")
+        print("2. Hapus Kontak")
+        print("3. Tampilkan Kontak")
+        print("4. Cari Kontak")
+        print("5. Sortir Kontak")
+        print("6. Blokir Kontak")
+        print("7. Unblokir Kontak")
+        print("8. Keluar")
+        pilihan = input("Pilih menu (1-8): ")
+        if pilihan == "1":
+            nama = input("Masukkan nama kontak: ")
+            nomor = input("Masukkan nomor telepon: ")
+            tambah_kontak(kontak, nama, nomor)
+        elif pilihan == "2":
+            nama = input("Masukkan nama kontak yang ingin dihapus: ")
+            hapus_kontak(kontak, nama)
+        elif pilihan == "3":
+            tampilkan_kontak(kontak)
+        elif pilihan == "4":
+            nama = input("Masukkan nama kontak yang ingin dicari: ")
+            cari_kontak(kontak, nama)
+        elif pilihan == "5":
+            insertion_sort(kontak)
+            print("Kontak berhasil disortir secara otomatis!")
+        elif pilihan == "6":
+            nama = input("Masukkan nama kontak yang ingin diblokir: ")
+            blokir_kontak(kontak, daftar_blokir, nama)
+        elif pilihan == "7":
+            nama = input("Masukkan nama kontak yang ingin diunblokir: ")
+            unblokir_kontak(kontak, daftar_blokir, nama)
+        elif pilihan == "8":
+            print("Terima kasih telah menggunakan KoneksiUP.")
+            break
+        else:
+            print("Pilihan tidak valid. Silakan pilih menu (1-8) yang tersedia.")
+
+main()
