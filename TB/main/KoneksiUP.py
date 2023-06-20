@@ -25,6 +25,7 @@ def tampilkan_kontak(kontak):
             print(f"Nama: {nama}")
             print(f"Nomor: {nomor}")
             print("=======================")
+            
 def cari_kontak(kontak, nama):
     print("Data kontak:")
     for data in kontak:
