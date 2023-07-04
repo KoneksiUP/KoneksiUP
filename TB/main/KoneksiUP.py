@@ -87,6 +87,7 @@ def main():
         print("6. Blokir Kontak")
         print("7. Unblokir Kontak")
         print("8. Keluar")
+        print("=====================")
         pilihan = input("Pilih menu (1-8): ")
         if pilihan == "1":
             nama = input("Masukkan nama kontak: ")
