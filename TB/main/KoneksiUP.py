@@ -104,6 +104,7 @@ def main():
         elif pilihan == "5":
             insertion_sort(kontak)
             print("Kontak berhasil disortir secara otomatis!")
+            tampilkan_kontak(kontak)
         elif pilihan == "6":
             nama = input("Masukkan nama kontak yang ingin diblokir: ")
             blokir_kontak(kontak, daftar_blokir, nama)
